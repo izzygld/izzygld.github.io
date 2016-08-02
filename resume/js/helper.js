@@ -67,6 +67,7 @@ var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 var internationalizeButton = '<button class="internationalizeButton">Click to Internationalize</button>';
 var googleMap = '<div id="map"></div>';
+//need to add twitter api feed
 
 
 /*

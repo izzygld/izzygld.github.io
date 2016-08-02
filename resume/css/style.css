@@ -50,7 +50,7 @@ h6 {
 
 .navigationBar {
     padding: 15px;
-    background-color: #f5ae23;
+    background-color: #33ccff;
 }
 
 .navigation {
@@ -277,7 +277,7 @@ span {
 
 #mapDiv {
     height: 300px;
-    width: 90%;
+    width: 50%;
     padding-left: 5%;
     padding-bottom: 5%;
 }
