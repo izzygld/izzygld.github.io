@@ -4,6 +4,9 @@ HTML5 Canvas.
 Students are provided with images and a game loop engine, and must build the game from there.*/
 // Constant variables
 // player location variables
+
+'use strict';
+
 var playerX = 200;
 var playerY = 400;
 
