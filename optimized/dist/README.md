@@ -12,8 +12,8 @@ Files:
 * Src folder - original old code.
 
 ### Getting started
-* [Camerons portifolia](https://izzygld.github.io/optimized/index.html) Clink on the linkfor a optimized version of Camerons portifolia.
-* [pizza page](https://izzygld.github.io/optimized/views/pizza.html)
+* [Camerons portifolia](https://izzygld.github.io/optimized/dist/index.html) Clink on the linkfor a optimized version of Camerons portifolia.
+* [pizza page](https://izzygld.github.io/optimized/dist/views/pizza.html)
 Click on Cam's Pizzeria To order your pizza you need to use the size slider to select the size of your pizza. You can scroll throught the selection and choose which one you want to order.
 
 
@@ -33,8 +33,8 @@ Modifications Included:
 
 # Cam's Pizza Store Optimizations:
 
-* I modified the amount of pizzas rendered in the background from 200 to 40 which greatly reduced the frame rate issue. 
-* To further reduce the frame rate I assigned ```document.getElementsByClassName("mover")``` to items so that it isn't being assigned each time the loop happens. It simply just gets the items. 
+* I modified the amount of pizzas rendered in the background from 200 to 40 which greatly reduced the frame rate issue.
+* To further reduce the frame rate I assigned ```document.getElementsByClassName("mover")``` to items so that it isn't being assigned each time the loop happens. It simply just gets the items.
 * I also took out ```document.body.scrollTop / 1250;``` which prevents the calculation being done everytime you scroll saving you more of those precious frames.
 *  Also took out ```var phase = Math.sin(scrollT + (i % 5));``` and ```var pizzaDiv = document.getElementById("randomPizzas")``` so that they don't get calculated each time the for loop is ran.
 
