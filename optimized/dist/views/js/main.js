@@ -511,13 +511,15 @@ function updatePositions() {
   //items prevents the loop from assigning background pizzas everytime the loop is ran.
   //scrollTop prevents the loop from making the same calculation each time it has ran.
   var items = document.getElementsByClassName("mover");
-  var scrollTop = document.body.scrollTop / 1250;
-
-  // Call phase once so that it doesn't have to run every single time.
-  var phase = Math.sin(scrollTop + (i % 5));
-  for (var i = 0; i < items.length; i++) {
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
-  }
+  var scrollTop = (document.body.scrollTop) / 1250;
+    var i;
+    var phase = [];
+    for (i = 0; i < 5; i++) {
+        phase.push(Math.sin(scrollTop + i % 5));
+    }
+    for (i = 0; i < totalPizzas; i++) {
+        items[i].style.left = items[i].basicLeft + 100 * phase[i % 5] + 'px';
+    }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
   // Super easy to create custom metrics.
