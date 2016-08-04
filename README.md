@@ -1,3 +1,10 @@
+### Preview
+* [Camerons portifolia](https://izzygld.github.io/optimized/dist/index.html) Clink on the linkfor a optimized version of Camerons portifolia.
+* [pizza page](https://izzygld.github.io/optimized/dist/pizza.html)
+Click on Cam's Pizzeria To order your pizza you need to use the size slider to select the size of your pizza. You can scroll throught the selection and choose which one you want to order.
+* [Game page](https://izzygld.github.io/)Click on the link to play the exciting frogging game...
+
+
 **frontend-nanodegree-arcade-game**
 ===============================
 
@@ -8,13 +15,13 @@ Files:
 images folder contains all the artwork for this game.
 * js folder contains:
    * app file : framework by Udacity and updated by me
-    * engine: given by Udacity 
+    * engine: given by Udacity
     * resources: given by Udacity
 
 
 Loading Game:
 =============
-To load the game go to the folder named "frontend-nanodegree-arcade-game." Open the folder and right click the index folder and choose to open with the Chrome web browser. Chrome will open and automatically start the game. The player starts at the bottom. 
+To load the game go to the folder named "frontend-nanodegree-arcade-game." Open the folder and right click the index folder and choose to open with the Chrome web browser. Chrome will open and automatically start the game. The player starts at the bottom.
 
 Game Controls:
 =========
