@@ -1,4 +1,5 @@
 // <!-- Still need to implemet the navbar icons
+//make it more mvc framework compatiible
 
 var work = {
 
@@ -47,7 +48,7 @@ var projects = {
             "dates": "2015 -2016",
             "description": "Personal website, PHP, wordpress, blog",
             "images": ["images/fry.jpg"],
-            "url": "http://izzygoldman.org/"
+            "url": "https://izzygoldmanco.wordpress.com/"
         },
 
         {
