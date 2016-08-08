@@ -52,11 +52,11 @@ var projects = {
         },
 
         {
-            "title": "European Traffic-Light",
+            "title": "Optomoziation of Cam's Pizza Store",
             "dates": "2015 -2016",
-            "description": "Created a european traffic-light which automatically switches color by using ONLY CSS & HTML!",
-            "images": ["images/Traffic-Light.png"],
-            "url": "https://jsfiddle.net/izzygld/y27vey84/"
+            "description": "Optimized critical rendering path of existing website to achieve PageSpeed Insights score above 90 and Eliminated inefficiencies in the website's scroll animation. Site now scrolls at 60 frames per second.",
+            "images": ["images/pizzeria-large.jpg"],
+            "url": "https://izzygld.github.io/optimized/dist/pizza.html"
         }
     ],
 
