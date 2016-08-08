@@ -47,7 +47,7 @@ var projects = {
             "title": "Website design",
             "dates": "2015 -2016",
             "description": "Personal website, PHP, wordpress, blog",
-            "images": ["images/fry.jpg"],
+            "images": ["images/mywebsite.jpg"],
             "url": "https://izzygoldmanco.wordpress.com/"
         },
 
