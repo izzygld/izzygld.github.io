@@ -3,6 +3,7 @@
 * [pizza page](https://izzygld.github.io/optimized/dist/pizza.html)
 Click on Cam's Pizzeria To order your pizza you need to use the size slider to select the size of your pizza. You can scroll throught the selection and choose which one you want to order.
 * [Game page](https://izzygld.github.io/) Click on the link to play the exciting frogging game...
+* [Resume page](https://izzygld.github.io/resume/index.html) Click on the link to view my insightful portifolia...
 
 
 **frontend-nanodegree-arcade-game**

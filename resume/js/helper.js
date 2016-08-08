@@ -123,7 +123,152 @@ function initializeMap() {
 
   var mapOptions = {
     disableDefaultUI: true,
-    zoomControl: false,
+    styles: [
+      {
+          "featureType": "water",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "hue": "#2F6F9F"
+              },
+              {
+                  "saturation": 30
+              },
+              {
+                  "lightness": -20
+              },
+              {
+                  "visibility": "on"
+              }
+          ]
+      },
+      {
+          "featureType": "poi",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "hue": "#ffffff"
+              },
+              {
+                  "saturation": -100
+              },
+              {
+                  "lightness": 100
+              },
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "transit",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "hue": "#ffffff"
+              },
+              {
+                  "saturation": 0
+              },
+              {
+                  "lightness": 100
+              },
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "road.highway",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "hue": "#deecec"
+              },
+              {
+                  "saturation": -73
+              },
+              {
+                  "lightness": 72
+              },
+              {
+                  "visibility": "on"
+              }
+          ]
+      },
+      {
+          "featureType": "road.highway",
+          "elementType": "labels",
+          "stylers": [
+              {
+                  "hue": "#bababa"
+              },
+              {
+                  "saturation": -100
+              },
+              {
+                  "lightness": 25
+              },
+              {
+                  "visibility": "on"
+              }
+          ]
+      },
+      {
+          "featureType": "landscape",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "hue": "#e3e3e3"
+              },
+              {
+                  "saturation": -100
+              },
+              {
+                  "lightness": 0
+              },
+              {
+                  "visibility": "on"
+              }
+          ]
+      },
+      {
+          "featureType": "road",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "hue": "#ffffff"
+              },
+              {
+                  "saturation": -100
+              },
+              {
+                  "lightness": 100
+              },
+              {
+                  "visibility": "simplified"
+              }
+          ]
+      },
+      {
+          "featureType": "administrative",
+          "elementType": "labels",
+          "stylers": [
+              {
+                  "hue": "#59cfff"
+              },
+              {
+                  "saturation": 100
+              },
+              {
+                  "lightness": 34
+              },
+              {
+                  "visibility": "on"
+              }
+          ]
+      }
+    ]
 
   };
 
@@ -144,10 +289,7 @@ function initializeMap() {
     var locations = [];
 
     // adds the single location property from bio to the locations array
-    locations.push(bio.contacts.location,bio.contacts.homeTown);
-        //locations.push(bio.contacts.grewUp);
-
-
+    locations.push(bio.contacts.location);
 
     // iterates through school locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
@@ -192,23 +334,12 @@ function initializeMap() {
     // or hover over a pin on a map. They usually contain more information
     // about a location.
     var infoWindow = new google.maps.InfoWindow({
-      content: name,
-      position: marker
+      content: name
     });
-
-
-
-    marker.addListener('click',function(){
-      infoWindow.open(map,marker);
-    })
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
-
-      lon = loc.pageX;
-      lat = loc.pageY;
-
     });
 
     // this is where the pin actually gets added to the map.
@@ -275,6 +406,6 @@ window.addEventListener('load', initializeMap);
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
 window.addEventListener('resize', function(e) {
-  // Make sure the map bounds get updated on page resize
+  //Make sure the map bounds get updated on page resize
  map.fitBounds(mapBounds);
 });
