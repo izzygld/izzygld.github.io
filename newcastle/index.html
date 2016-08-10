@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/maps.png" type="image/png">
+    <title> Newcastle Upon Tyne</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+            <div class="location"><h4>Newcastle Upon Tyne</h4><h6>The Quayside!</h6></div>
+            <div class="row geordie">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="col-xs-2">
+
+                    <img src="images/shop-iconSm.png" alt="Quayside shops in the area icon">
+                    <label> Shops </label>
+                </div>
+                <div class="col-xs-2">
+
+
+                    <img src="images/hotelSm.jpg" alt="Hotels on the Quayside icon">
+                    <label> Hotels </label>
+                </div>
+                <div class="col-xs-2">
+
+                    <img src="images/barSm.png" alt="Pubs/bar on the Quayside icon ">
+                    <label> Pubs/Bars </label>
+                </div>
+                <div class="col-xs-2">
+
+                    <img src="images/toiletsSm.jpg" alt="Toilets on the Quayside icon">
+                    <label> Toilets </label>
+                </div>
+
+            </div>
+
+            <div>
+                <div class="navbar-collapse collapse">
+                    <div class="nav navbar-nav navbar-left">
+
+                        <div class="row">
+                            <div class="col-md-4">
+
+                            <div class="col-lg-1 choose-location">
+                                <label class="tags" for="tags"><em>                                 Search:</em></label>
+                                <input class="list-group-item col-lg-11 ui-widget search-bar" type="search" id="tags" data-bind="textInput: query, valueUpdate: 'keyup'">
+                            </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <footer class="navbar-fixed-bottom footer1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <h6>Choose a location:</h6>
+                </div>
+
+                <div class="col-lg-10">
+                    <ul class="list-group location-list" data-bind="foreach: locations, foreach: search()">
+                        <li class="btn btn-secundary" data-bind="text: name, click: $parent.toggleMarker">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <main class="container" id="map">
+    </main>
+
+    <script src="js/knockout-3.4.0.js"></script>
+    <script src="js/locations.js"></script>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script src="js/app.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbXSyY9PUu5rnrnI-7XXHOYMGqGEiFfD0&callback=initMap" onerror="mapsError()"></script>
+    <script src="js/bootstrap.js"></script>
+
+</body>
