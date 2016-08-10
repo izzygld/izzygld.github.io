@@ -11,6 +11,8 @@ covering some magnificent places in Geordie-land.
 
 Simply open index.html. and enjoy!
 
+Or for a live version [click here](https://izzygld.github.io/newcastle/)
+
 # Additional information
 
 Every symbol represents something:

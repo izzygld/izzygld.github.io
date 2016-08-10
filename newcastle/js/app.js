@@ -7,7 +7,7 @@ var mapLng = "-1.6527488"; //
 function loadData(marker) {
 
     var wikipediaUrl =
-        'http://en.wikipedia.org/w/api.php?action=opensearch&limit=1&search=' + // Maximize to 1 wiki link (with limit)
+        'https://en.wikipedia.org/w/api.php?action=opensearch&limit=1&search=' + // Maximize to 1 wiki link (with limit)
         marker.name +
         '&format=json&callback=wikiCallback';
     var wikiRequestTimeout = setTimeout(function() {
@@ -19,7 +19,7 @@ function loadData(marker) {
         success: function(response) {
             var wikiTitle = response[1];
             marker.description = response[2];
-            var url = 'http://en.wikipedia.org/wiki/' + wikiTitle;
+            var url = 'https://en.wikipedia.org/wiki/' + wikiTitle;
             marker.wikipedia = '<li><a href="' + url + '" target="_blank">' + wikiTitle + '</a></li>';
             console.log(marker.description);
             infowindow.setContent(
@@ -46,7 +46,7 @@ function loadPhoto(marker) {
         alert("There seems to be a problem. Resources from Flickr could not be loaded."); // Error handler
     }, 6000);
 
-    var flickrUrl = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+    var flickrUrl = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
     $.getJSON(flickrUrl, {
             tags: marker.name,
             tagmode: "any",
