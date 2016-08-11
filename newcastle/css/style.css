@@ -163,6 +163,9 @@ body {
         font-size: 12px;
     }
 
+var mapLat = "54.9637978";
+var mapLng = "-1.6254708";
+
     .infowindows {
         font-size: 12px;
         height: 240px;
@@ -179,6 +182,9 @@ body {
     label {
         font-size: 9px;
     }
+
+var mapLat = "54.9637978";
+var mapLng = "-1.6254708";
 
     .infowindows {
         font-size: 11px;

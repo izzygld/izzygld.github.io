@@ -1,7 +1,9 @@
 var tagList = []; // Taglist for autocomplete
-var mapLat = "54.9674931"; // Map initial center
-var mapLng = "-1.6527488"; //
+// var mapLat = "54.9674931"; // Map initial center
+// var mapLng = "-1.6527488"; //
 
+var mapLat = "54.9637978";
+var mapLng = "-1.6254708";
 // Wikipedia Ajax-function
 
 function loadData(marker) {
