@@ -117,6 +117,14 @@ body {
     min-width: 240px;
     height: 100%;
 }
+
+.choose {
+    font-family:fantasy;
+    color:purple;
+    font-size: 15px;
+
+}
+
 .location {
 
     text-align: center;

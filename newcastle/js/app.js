@@ -196,6 +196,10 @@ var AppViewModel = function() {
     });
 
 };
+var nightLife = function(time){
+
+return time;
+};
 
 // Auto-complete function, using tagList (placed in for-loop that creates markers)
 
