@@ -2,6 +2,7 @@
 body {
     font-family: 'Open Sans';
     font-size: 11px;
+
 }
 
 ::-webkit-scrollbar {
@@ -37,6 +38,9 @@ body {
 
 .tags {
     margin: 5px;
+}
+.row {
+        margin-left:15px;
 }
 
 .ui-autocomplete {
@@ -225,6 +229,12 @@ body {
         font-size: 12px;
     }
 
+
+    .row{
+       margin-left:-10px;
+
+    }
+
     .navbar-default {
     background-color: lightblue;
     border: 0px;
@@ -257,6 +267,10 @@ body {
 @media screen and (max-width: 400px) {
     label {
         font-size: 9px;
+    }
+    .row{
+                margin-left:-10px;
+
     }
 
 
