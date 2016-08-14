@@ -225,6 +225,21 @@ body {
         font-size: 12px;
     }
 
+    .navbar-default {
+    background-color: lightblue;
+    border: 0px;
+    margin: 7px;
+    border-radius: 7px;
+    max-width: 30%;
+    max-height:50px;
+
+}
+
+#tags{
+    max-width: 10px;
+
+
+}
 
 
     .infowindows {
