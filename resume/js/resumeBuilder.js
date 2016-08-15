@@ -260,7 +260,3 @@ function inName() {
 }
 
 inName();
-
-//var welcomeMessage = bio.welcomeMessage;
-//var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", welcomeMessage);
-//$("#header").append(formattedWelcomeMessage);
