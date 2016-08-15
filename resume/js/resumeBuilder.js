@@ -57,6 +57,13 @@ var projects = {
             "description": "Optimized critical rendering path of existing website to achieve PageSpeed Insights score above 90 and Eliminated inefficiencies in the website's scroll animation. Site now scrolls at 60 frames per second.",
             "images": ["images/pizzeria-large.jpg"],
             "url": "https://izzygld.github.io/optimized/dist/pizza.html"
+        },
+        {
+            "title": "Arcade Game",
+            "dates": "2015 -2016",
+            "description": "Redesign of the classic Arcade frogger game",
+            "images": ["images/frogger.png"],
+            "url": "https://izzygld.github.io/frogger-game/"
         }
     ],
 
