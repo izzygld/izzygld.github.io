@@ -1,21 +1,30 @@
- <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
+// var modalImage = function(){
 
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Quick Menu</h4>
-        </div>
-        <div class="modal-body">
-<img class="img-responsive" src="images/pool.jpg">          <p>chilling!!!!.</p>
-        </div>
-        <div class="modal-footer">
-            <p>Copyright 2016</p>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
+// if ($())
 
-    </div>
-  </div>
+
+// };
+
+
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+});
+
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#myModal").modal();
+    });
+});
+
+$('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+
+
