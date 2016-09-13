@@ -6,6 +6,14 @@ var mapLat = "54.9637978";
 var mapLng = "-1.6254708";
 // Wikipedia Ajax-function
 
+//still need to implement wikipedia url api
+// function MinifyData(wikipediaUrl){
+//         if (wikipediaUrl > marker) {
+//                 wikipediaUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&limit=1&search=';
+
+//         };
+// }
+
 function loadData(marker) {
 
     var wikipediaUrl =
