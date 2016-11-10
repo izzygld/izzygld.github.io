@@ -1,3 +1,0 @@
-<?php
-// sheket is zahav
-?>
