@@ -107,7 +107,7 @@ var bio = {
     "role": "Web developer",
     "welcomeMessage": "Welcome to my resume",
     "skills": ["Frontend developer ", " JS", " HTML5", " CSS3", " JQuery", "AJAX","BootStrap"],
-    "biopic": "images/me.jpg",
+    "biopic": "images/beach.jpg",
 
 
     "contacts": {
