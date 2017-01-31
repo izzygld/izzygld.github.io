@@ -4,22 +4,10 @@
 * [pizza page](https://izzygld.github.io/optimized/dist/pizza.html)
 Click on Cam's Pizzeria To order your pizza you need to use the size slider to select the size of your pizza. You can scroll throught the selection and choose which one you want to order.
 * [Game page](https://izzygld.github.io/frogger-game/) Click on the link to play the exciting frogging game...
-* [Resume page](https://izzygld.github.io/resume/index.html) Click on the link to view my insightful portifolia...
 
 
-**frontend-nanodegree-arcade-game**
+**arcade-game**
 ===============================
-
-Files:
-======
-* Index contains the HTML code.
-* CSS folder contains CSS format file
-images folder contains all the artwork for this game.
-* js folder contains:
-   * app file : framework by Udacity and updated by me
-    * engine: given by Udacity
-    * resources: given by Udacity
-
 
 Loading Game:
 =============
@@ -51,8 +39,6 @@ You must try to cross the road without getting hit by the bugs. If you get hit b
 
 Credits and acknowledgements:
 =============================
-This project was created by me using the framework given to me by Udacity and also received a great deal of help using the Udacity forum discussions by other students and mentors.
-
 
 Thanks for trying it!.
 
