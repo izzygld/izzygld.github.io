@@ -4,6 +4,21 @@
     background-position: center;
     background-size: cover;
 }
+@media (min-width: 1020px) {
+
+.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-36.menu-search{
+  float: right;
+    margin-right: 20px;
+    margin-left: 15px;
+}
+}
+@media (max-width: 768px) {
+
+.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-36.menu-search{
+  margin-bottom: 25px;
+}
+}    
+
 img {
     width: 100%;
     vertical-align: middle;
