@@ -13,6 +13,7 @@
     <meta property="og:url" content="Rav Yakkov Yagen" />
     <meta property="og:site_name" content="Rav Yakkov Yagen" />
     <style type="text/css">
+    [v-cloak] { display:none; }
       img.wp-smiley,
       img.emoji {
         display: inline !important;
@@ -77,10 +78,10 @@
 
   </head>
   <body 
-        class="page-template-default page page-id--1 page-parent">
+        class="page-template-default page page-id--1 page-parent" id="yy-v" v-cloak>
     <header>
       <div id="communityBar">
-        <div class="container">
+        <div class="container" >
           <div class="zmanim-content hidden-xs">
             <span id="myLocation" data-communityBar="location">
               <span data-zman="city" class="city">
@@ -188,8 +189,8 @@
               </a>
             </div>
             <div class="col-sm-7 col-xs-7">
-              <form method="get" id="searchForm" class="clearfix main-search" action="/">
-                <input type="text" name="s" id="search-term" placeholder="Search" />
+              <form method="get" id="searchForm" class="clearfix main-search">
+                <input type="text"  id="search-term" placeholder="Search" v-model="query" v-on:keyup.enter="search" />
                 <button type="submit" class="">
                   <i class="fa fa-search">
                   </i>
@@ -278,98 +279,22 @@
         <div class="col-md-12">
           <div class="video-page-container">
             <ul>
-              <li>
+
+              <li v-for="story in stories | filterBy query in 'title' "" >
                 <div class="img-container">
-                  <img src="http://i3.ytimg.com/vi/QeerMGvWdQo/maxresdefault.jpg">
+                  <img v-bind:src="story.img">
                 </div> 
                 <div class="video-description">
                   <span class="video-author">Rav Yakkov Yagen 
                   </span> 
-                  <span class="video-title">Ahavat Yisrael
+                  <span class="video-title" v-cloak> {{story.title}}
                   </span> 
-                  <span class="video-date">Jul 18, 2017
+                  <span class="video-date" v-cloak> {{story.date}}
                   </span>
                 </div> 
-                <a  href="https://youtu.be/QeerMGvWdQo" class="btn mediabox">Watch
+                <a  v-bind:href="story.src" class="btn mediabox">Watch
                 </a>
               </li>
-
-              <li>
-                <div class="img-container">
-                  <img src="http://i3.ytimg.com/vi/DQ5WqPCPQjk/maxresdefault.jpg">
-                </div> 
-                <div class="video-description">
-                  <span class="video-author">Rav Yakkov Yagen 
-                  </span> 
-                  <span class="video-title">We all belong
-                  </span> 
-                  <span class="video-date">5th tamuz /june 29 2017
-                  </span>
-                </div> 
-                <a href="https://youtu.be/DQ5WqPCPQjk" class="btn mediabox">Watch
-                </a>
-              </li>    
-              <li>
-                <div class="img-container">
-                  <img src="http://i3.ytimg.com/vi/jlXEExDkTKc/maxresdefault.jpg">
-                </div> 
-                <div class="video-description">
-                  <span class="video-author">Rav Yakkov Yagen 
-                  </span> 
-                  <span class="video-title">Feeling Blessed
-                  </span> 
-                  <span class="video-date">28th Sivan / 6-22-17
-                  </span>
-                </div> 
-                <a href="https://youtu.be/jlXEExDkTKc" class="btn mediabox">Watch
-                </a>
-              </li>    
-              <li>
-                <div class="img-container">
-                  <img src="http://i3.ytimg.com/vi/lqQQOYimU5k/maxresdefault.jpg">
-                </div> 
-                <div class="video-description">
-                  <span class="video-author">Rav Yakkov Yagen 
-                  </span> 
-                  <span class="video-title">THE BIG QUEENS EVENT!
-                  </span> 
-                  <span class="video-date">Mar 7, 2017
-                  </span>
-                </div> 
-                <a  href="https://youtu.be/lqQQOYimU5k" class="btn mediabox">Watch
-                </a>
-              </li>    
-              <li>
-                <div class="img-container">
-                  <img src="http://i3.ytimg.com/vi/m2QsyzVgwh4/maxresdefault.jpg">
-                </div> 
-                <div class="video-description">
-                  <span class="video-author">Rav Yakkov Yagen  
-                  </span> 
-                  <span class="video-title">Rav Nissim & Me!
-                  </span> 
-                  <span class="video-date">Jun 9, 2017
-                  </span>
-                </div> 
-                <a href="https://youtu.be/m2QsyzVgwh4" class="btn mediabox">Watch
-                </a>
-              </li>    
-              <li>
-                <div class="img-container">
-                  <img src="http://i3.ytimg.com/vi/3_PZXlNcZuE/maxresdefault.jpg">
-                </div> 
-                <div class="video-description">
-                  <span class="video-author">Rav Yakkov Yagen 
-                  </span> 
-                  <span class="video-title">Mount Sinai & Me!
-                  </span> 
-                  <span class="video-date">May 26, 2017
-                  </span>
-                </div> 
-                <a href="https://youtu.be/3_PZXlNcZuE" class="btn mediabox">Watch
-                </a>
-              </li>    
-     
                
             </ul>
           </div>
@@ -529,6 +454,63 @@
 
 });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.6/vue.js"></script>
 
+<script type="text/javascript">
+
+new Vue({
+    el:  '#yy-v',
+    data:{
+      query: '',
+      nofound:'',
+      stories:[
+      {
+        img: "http://i3.ytimg.com/vi/QeerMGvWdQo/maxresdefault.jpg",
+        src: "https://youtu.be/QeerMGvWdQo",
+        title: "Ahavat Yisrael",
+        date: "Jul 18, 2017"
+      },        
+{
+      img: "http://i3.ytimg.com/vi/DQ5WqPCPQjk/maxresdefault.jpg",
+        src: "https://youtu.be/DQ5WqPCPQjk",
+        title: "We all belong ",
+        date: "5th tamuz /june 29 2017"
+      },      
+
+{
+      img: "http://i3.ytimg.com/vi/jlXEExDkTKc/maxresdefault.jpg",
+        src: "https://youtu.be/jlXEExDkTKc",
+        title: "Feeling Blessed",
+        date: "28th Sivan / 6-22-17"
+      },      
+
+  
+{
+
+           img: "http://i3.ytimg.com/vi/lqQQOYimU5k/maxresdefault.jpg",
+        src: "https://youtu.be/lqQQOYimU5k",
+        title: "THE BIG QUEENS EVENT!",
+        date: "Mar 7, 2017"
+      },  
+
+{
+            img: "http://i3.ytimg.com/vi/m2QsyzVgwh4/maxresdefault.jpg",
+        src: "https://youtu.be/m2QsyzVgwh4",
+        title: "Rav Nissim & Me!",
+        date: "Jun 9, 2017"
+      },  
+
+{
+            img: "http://i3.ytimg.com/vi/3_PZXlNcZuE/maxresdefault.jpg",
+        src: "https://youtu.be/3_PZXlNcZuE",
+        title: "Mount Sinai & Me!",
+        date: "May 26, 2017"
+      },
+      ]
+    },
+
+  })
+
+</script>
   </body>
 </html>
