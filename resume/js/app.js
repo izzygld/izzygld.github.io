@@ -34,51 +34,6 @@ var animateOnLoad = function() {
 
 window.onload = animateOnLoad;
 
-
-
-
-
-/*----- 
-/*----- 
-  
-  
-  $(document).ready(function(){
-    var menuTitle = document.getElementById('menu-toggle');
-      $(".nav a").click(function(){
-        $(".overlay").fadeToggle(100);
-        $(this).toggleClass('btn-open').toggleClass('btn-close');
-        if ($(this).text()=='Work')
-        {
-          $(this).text('Close');
-        } 
-        else {
-          $(this).text('Work');
-        }
-  
-      });
-  }); 
-  
-  this is some js for the navigation overlay ---*/
-/*----- 
-  
-  
-  $(document).ready(function(){
-    var menuTitle = document.getElementById('menu-toggle');
-      $(".nav a").click(function(){
-        $(".overlay").fadeToggle(100);
-        $(this).toggleClass('btn-open').toggleClass('btn-close');
-        if ($(this).text()=='Work')
-        {
-          $(this).text('Close');
-        } 
-        else {
-          $(this).text('Work');
-        }
-  
-      });
-  }); 
-  
-  this is some js for the navigation overlay ---*/
 $(document).ready(function() {
     var menuTitle = document.getElementById('menu-toggle');
     $(".nav a").click(function() {
@@ -131,5 +86,3 @@ $(document).ready(function() {
   }); 
   
   this is some js for the navigation overlay ---*/
-this is some js
-for the navigation overlay-- - * /
