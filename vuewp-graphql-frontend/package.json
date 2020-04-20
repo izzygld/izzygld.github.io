@@ -11,11 +11,11 @@
   "dependencies": {
     "lokka": "^1.7.0",
     "lokka-transport-http": "^1.6.1",
-    "path-to-regexp": "^1.7.0",
-    "vue": "^2.1.0",
-    "vue-head": "^2.0.10",
-    "vue-resource": "^1.0.3",
-    "vue-router": "^2.0.3",
+    "path-to-regexp": "^1.8.0",
+    "vue": "^2.6.11",
+    "vue-head": "^2.2.0",
+    "vue-resource": "^1.5.1",
+    "vue-router": "^2.8.1",
     "vue-visual": "^0.1.5",
     "vue2-animate": "^1.0.4"
   },
