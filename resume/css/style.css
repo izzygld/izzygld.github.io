@@ -181,10 +181,10 @@ p {
 
 @media (min-width: 600px) {
   .project {
-    height: 120vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat (10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     align-items: center;
     margin-bottom: 0;
     background-color: #fafaff;
