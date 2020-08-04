@@ -35,7 +35,6 @@
 </template>
 
 <script>
-import AppCheckout from './../components/AppCheckout.vue';
 import AppSuccess from './../components/AppSuccess.vue';
 
 export default {
@@ -45,7 +44,6 @@ export default {
     };
   },
   components: {
-    AppCheckout,
     AppSuccess
   },
   computed: {
