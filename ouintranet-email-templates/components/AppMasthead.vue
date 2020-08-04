@@ -19,7 +19,7 @@ export default {
     },
     title: {
       type: String,
-      default: 'Ou Intranet Emails'
+      default: 'OUIntranet Emails'
     },
     img: {
       type: String,
