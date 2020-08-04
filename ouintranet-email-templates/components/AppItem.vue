@@ -5,11 +5,17 @@
 <!--     <img :src="`/${item.img}`" :alt="`Image of ${item.name}`">
  -->    <div class="item__bgImage" :style="{ backgroundImage: 'url(' + item.img + ')' }"></div>
     <!-- <p>{{ item.usage | usdollar }}</p> -->
-    <a :href="item.img" target="_blank" class="button">View Email</a>
-    <!-- <button class="add" @click="viewItem">View Email</button> -->
+    <button class="add" @click="showModal">View Email</button>
+    <!-- <a :href="item.img" target="_blank" class="button">View Email New Page</a> -->
     <!-- <button class="add" @click="viewItem">View Email</button> -->
    <!--  <button class="quick-view" @click="">Quick View
     </button> -->
+        <AppModal
+      v-show="isModalVisible"
+      @close="closeModal"
+      :image="item.img"
+      :name="item.name"
+    />
   </div>
 </template>
 
@@ -28,6 +34,11 @@ export default {
       required: true
     }
   },
+  data() {
+    return {
+      isModalVisible: false
+    };
+  },  
   filters: {
     usdollar: function(value) {
       return `$${value}`;
@@ -39,7 +50,13 @@ export default {
     },
     viewItem() {
       this.showModal = true
-    }
+    },
+      showModal() {
+        this.isModalVisible = true;
+      },
+      closeModal() {
+        this.isModalVisible = false;
+      }    
   },
     components: {
     AppModal

@@ -1,8 +1,8 @@
 module.exports = {
   target: 'static',
-  router: {
-    base: '/ouintranet-email-templates/'
-  },
+  // router: {
+  //   base: '/ouintranet-email-templates/'
+  // },
   /*
   ** Headers of the page
   */
