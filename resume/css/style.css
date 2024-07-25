@@ -111,8 +111,9 @@ a:hover {
   margin-top: 2rem;
 }
 
+
 .bio {
-  padding: 5vw;
+  padding: 2vw;
 }
 
 /*---[INDEX] intro breakpoints---*/
@@ -321,4 +322,44 @@ footer .footer__icons a {
 }
 footer .footer__icons a:hover {
   color: red;
+}
+
+
+.intromain{
+  max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 0px 20px;
+}
+.intromain img{
+max-width: 100%;
+    height: auto;
+}
+.bio h4 {
+    margin-top: 0px;
+    margin-bottom: 22px;
+}
+@media (max-width: 720px) {
+
+.intromain{
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    flex-flow: column;
+    padding: 20px;
+    gap: 20px;
+}
+.intromain img{
+    height: 225px;
+    border-radius: 50%;
+}
+.bio h4 {
+    margin-top: 0px;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
 }
