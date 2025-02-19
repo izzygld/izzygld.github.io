@@ -517,6 +517,15 @@ font-size: 24px;
 a.header__img{
   height: 200px;
 }
+a.header__img:hover{
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-name: headShake;
+    animation-name: headShake;
+        animation-duration:2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
 a.header__img img{
     object-fit: cover;
     width: 100%;
@@ -528,4 +537,22 @@ a.header__img img{
 .space-between {
 }
 .align-center {
+}
+.website__link {
+    color: #ff0000;
+    font-style: italic;
+    font-size: 16px;
+    padding-top: 2px;
+    line-height: normal;
+}
+
+.flex.space-between {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-flow: wrap;
+    align-items: center;
+}
+.posts__single:hover .website__link {
+    text-decoration: underline;
 }
