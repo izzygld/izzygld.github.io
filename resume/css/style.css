@@ -411,7 +411,7 @@ text-align: center;
     flex-flow: wrap;
         justify-content: space-between;
 }
-.posts__single {
+a.posts__single {
   background-color: #141518;
     border: 1px solid transparent;
     border-radius: 16px;
@@ -439,7 +439,7 @@ h4.other__proj {
     margin-bottom: 10px;
     font-weight: 400;
 }
-.posts__single a {
+a.posts__single {
     position: relative;
     text-decoration: none;
     z-index: 1;
@@ -497,7 +497,7 @@ font-size: 24px;
     font-weight: 400;
     line-height: 1.4;
 }
-.posts__single:hover {
+a.posts__single:hover {
     border-color: #16181d;
     top: -14px;
 }
@@ -505,7 +505,7 @@ font-size: 24px;
   font-size: 16px;
   font-style:italic;
 }
-.posts__single:hover:before {
+a.posts__single:hover:before {
     opacity: 1;
 }
 .divider {
@@ -514,10 +514,10 @@ font-size: 24px;
     margin: 10px 0;
     width: 100%;
 }
-a.header__img{
+.header__img{
   height: 200px;
 }
-a.header__img:hover{
+.header__img:hover{
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
     -webkit-animation-name: headShake;
@@ -526,7 +526,7 @@ a.header__img:hover{
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
-a.header__img img{
+.header__img img{
     object-fit: cover;
     width: 100%;
     height: 100%;
