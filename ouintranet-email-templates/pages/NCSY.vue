@@ -1,13 +1,12 @@
-
 <template>
   <main class="capsule">
     <app-masthead img="logo-email" title="NCSY" bkcolor="#e82319"/>
     <div class="contain">
-      <app-sidebar :usedamounts.sync="highusage"/>
+      <app-sidebar v-model="highusage"/>
       <transition-group name="items" tag="section" class="content">
         <app-item
-          v-for="(item, index) in wProducts"
-          key="item"
+          v-for="(item, index) in filteredProducts"
+          :key="item.img"
           :item="item"
           :index="index"
         />
@@ -16,30 +15,21 @@
   </main>
 </template>
 
-<script>
-import AppSidebar from './../components/AppSidebar.vue';
-import AppMasthead from './../components/AppMasthead.vue';
-import AppItem from './../components/AppItem.vue';
+<script setup>
+import { ref, computed } from 'vue'
+import AppSidebar from './../components/AppSidebar.vue'
+import AppMasthead from './../components/AppMasthead.vue'
+import AppItem from './../components/AppItem.vue'
+import { useMainStore } from '~/stores/main'
 
-export default {
-  components: {
-    AppSidebar,
-    AppMasthead,
-    AppItem
-  },
-  data() {
-    return {
-      highusage: 300
-    };
-  },
-  computed: {
-    wProducts() {
-      return this.$store.getters.NCSY.filter(el =>
-        this.$store.state.new
-          ? el.usage < this.highusage && el.new
-          : el.usage < this.highusage
-      );
-    }
-  }
-};
+const highusage = ref(300)
+const store = useMainStore()
+
+const filteredProducts = computed(() => {
+  return store.NCSY.filter(el =>
+    store.newFilter
+      ? el.usage < highusage.value && el.new
+      : el.usage < highusage.value
+  )
+})
 </script>

@@ -10,23 +10,21 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    bkcolor: {
-      type: String,
-      default: '#3b60ed'
-    },
-    title: {
-      type: String,
-      default: 'OUIntranet Emails'
-    },
-    img: {
-      type: String,
-      default: 'logo-email'
-    }
+<script setup>
+defineProps({
+  bkcolor: {
+    type: String,
+    default: '#3b60ed'
+  },
+  title: {
+    type: String,
+    default: 'OUIntranet Emails'
+  },
+  img: {
+    type: String,
+    default: 'logo-email'
   }
-};
+})
 </script>
 
 <style scoped>

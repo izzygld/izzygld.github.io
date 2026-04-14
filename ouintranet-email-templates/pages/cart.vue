@@ -1,28 +1,28 @@
 <template>
   <div class="capsule cart">
 
-    <div v-if="cartTotal > 0">
+    <div v-if="store.cartTotal > 0">
       <h1>Cart</h1>
       <div class="cartitems"
-        v-for="item in cart"
-        key="item">
+        v-for="item in store.cart"
+        :key="item.name">
         <div class="carttext">
           <h4>{{ item.name }}</h4>
-          <p>{{ item.usage | usdollar }} x {{ item.count }}</p>
+          <p>${{ item.usage }} x {{ item.count }}</p>
           <p>Total for this item: <strong>{{ item.usage * item.count }}</strong></p>
         </div>
         <img class="cartimg" :src="`/${item.img}`" :alt="`Image of ${item.name}`">
       </div>
       <div class="total">
-        <h3>Total: {{ total | usdollar }}</h3>
+        <h3>Total: ${{ total }}</h3>
       </div>
       <app-checkout :total="total" @successSubmit="success = true"></app-checkout>
     </div>
 
-    <div v-else-if="cartTotal === 0 && success === false" class="empty">
+    <div v-else-if="store.cartTotal === 0 && success === false" class="empty">
       <h1>Cart</h1>
       <h3>Your cart is empty.</h3>
-      <nuxt-link exact to="/"><button>Fill er up!</button></nuxt-link>
+      <NuxtLink exact to="/"><button>Fill er up!</button></NuxtLink>
     </div>
 
     <div v-else>
@@ -34,37 +34,19 @@
   </div>
 </template>
 
-<script>
-import AppSuccess from './../components/AppSuccess.vue';
+<script setup>
+import { ref, computed } from 'vue'
+import AppSuccess from './../components/AppSuccess.vue'
+import { useMainStore } from '~/stores/main'
 
-export default {
-  data() {
-    return {
-      success: false
-    };
-  },
-  components: {
-    AppSuccess
-  },
-  computed: {
-    cart() {
-      return this.$store.state.cart;
-    },
-    cartTotal() {
-      return this.$store.state.cartTotal;
-    },
-    total() {
-      return Object.values(this.cart)
-        .reduce((acc, el) => acc + (el.count * el.usage), 0)
-        .toFixed(2);
-    }
-  },
-  filters: {
-    usdollar: function(value) {
-      return `$${value}`;
-    }
-  }
-};
+const success = ref(false)
+const store = useMainStore()
+
+const total = computed(() => {
+  return Object.values(store.cart)
+    .reduce((acc, el) => acc + (el.count * el.usage), 0)
+    .toFixed(2)
+})
 </script>
 
 <style scoped>

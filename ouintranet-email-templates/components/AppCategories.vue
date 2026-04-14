@@ -2,7 +2,7 @@
   <div>
     <nav>
       <div class="capsule">
-        <nuxt-link exact to="/">
+        <NuxtLink to="/">
           <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-labelledby="shopicon" role="presentation" width="60" height="60">
             <title id="shopicon">
               Magi Shop
@@ -12,33 +12,34 @@
               <path d="M52.74 50H30.8a1 1 0 0 0-1 1v14.59a1 1 0 0 0 1 1h21.94a1 1 0 0 0 1-1V51a1 1 0 0 0-1-1zm-1 14.63H31.8V52h19.94zM60.08 62.94h5.44a1 1 0 0 0 1-1v-2.75a1 1 0 0 0-1-1h-5.44a1 1 0 0 0-1 1v2.74a1 1 0 0 0 1 1.01zm1-2.74h3.44v.74h-3.44z"/>
             </g>
           </svg>
-        </nuxt-link>
+        </NuxtLink>
         <ul>
-          <nuxt-link to="/OUTorah"><li>OU Torah</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Shabbat Shalom</li></nuxt-link> 
-          <nuxt-link to="/OUTorah"><li>OU Press</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Job Board</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Community Engagement</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Yachad</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>NCSY</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Kosher</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Alumni</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>IPA</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Jewish Action</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>IFS</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Staff Education</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Board Newsletter</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>OU Israel</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Rabbi Weinreb</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>OU General</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Team Yachad</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Arnold Gerson</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>NextGen</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Bring Israel Home</li></nuxt-link> 
-          <!-- <nuxt-link to="/men"><li>Men's</li></nuxt-link> -->
-          <nuxt-link to="/new"><li>New</li></nuxt-link>
+          <NuxtLink to="/all"><li>All</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>OU Torah</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Shabbat Shalom</li></NuxtLink> 
+          <NuxtLink to="/OUTorah"><li>OU Press</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Job Board</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Community Engagement</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Yachad</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>NCSY</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Kosher</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Alumni</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>IPA</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Jewish Action</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>IFS</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Staff Education</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Board Newsletter</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>OU Israel</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Rabbi Weinreb</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>OU General</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Team Yachad</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Arnold Gerson</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>NextGen</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Bring Israel Home</li></NuxtLink> 
+          <!-- <NuxtLink to="/men"><li>Men's</li></NuxtLink> -->
+          <NuxtLink to="/new"><li>New</li></NuxtLink>
         </ul>
-        <!-- <nuxt-link to="/cart">
+        <!-- <NuxtLink to="/cart">
           <div class="cartitem">
             <div v-if="cartTotal > 0" class="cartcount">{{ cartTotal }}</div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-labelledby="shopicon" role="presentation" width="30" height="30">
@@ -48,20 +49,21 @@
               <path fill="black" d="M8.01 10c-1.104 0-2 .896-2 2 0 1.105.896 2 2 2h10.376l10.53 49.813c-.107 1.14.952 2.245 2.095 2.187h50c1.057.015 2.03-.943 2.03-2s-.973-2.015-2.03-2H32.637l-1.688-8H85.01c.896-.01 1.742-.69 1.938-1.562l7-30c.26-1.16-.748-2.43-1.937-2.438H23.76l-1.78-8.437c-.2-.884-1.063-1.57-1.97-1.563zm16.594 14H89.51l-6.093 26H30.104zM42.01 72c-4.946 0-9 4.053-9 9s4.054 9 9 9c4.948 0 9-4.053 9-9s-4.052-9-9-9zm28 0c-4.946 0-9 4.053-9 9s4.054 9 9 9c4.948 0 9-4.053 9-9s-4.052-9-9-9zm-28 4c2.786 0 5 2.215 5 5s-2.214 5-5 5c-2.784 0-5-2.215-5-5s2.216-5 5-5zm28 0c2.786 0 5 2.215 5 5s-2.214 5-5 5c-2.784 0-5-2.215-5-5s2.216-5 5-5z"/>
             </svg>
           </div>
-        </nuxt-link> -->
+        </NuxtLink> -->
       </div>
     </nav>
   </div>
 </template>
 
-<script>
-export default {
-  computed: {
-    cartTotal() {
-      return this.$store.state.cartTotal;
-    }
-  }
-};
+<script setup>
+import { computed } from 'vue'
+import { useMainStore } from '~/stores/main'
+
+const store = useMainStore()
+
+const cartTotal = computed(() => {
+  return store.cartTotal
+})
 </script>
 
 <style scoped>

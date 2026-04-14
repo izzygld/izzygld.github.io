@@ -1,16 +1,16 @@
 <template>
   <aside>
     <div class="sidearea">
-      <label for="usedamounts">Most used: <span>{{ usedamounts }}</span></label>
+      <label for="usedamounts">Most used: <span>{{ modelValue }}</span></label>
       <input 
         class="slider" 
         id="usedamounts" 
         type="range"
-        :value="usedamounts"  
+        :value="modelValue"  
         :min="min" 
         :max="max" 
         step="0.1" 
-        @input="$emit('update:usedamounts', $event.target.value)"
+        @input="$emit('update:modelValue', $event.target.value)"
       />
       <span class="min">{{ min }}</span>
       <span class="max">{{ max }}</span>
@@ -24,73 +24,68 @@
     </div>
     <div class="sidearea callout">
      <ul class="sidebar-list">
-          <nuxt-link to="/OUTorah"><li>OU Torah</li></nuxt-link>
-          <nuxt-link to="/shabbatshalom"><li>Shabbat Shalom</li></nuxt-link> 
-          <nuxt-link to="/OuPress"><li>OU Press</li></nuxt-link>
-          <nuxt-link to="/OuJob"><li>Job Board</li></nuxt-link>
-          <nuxt-link to="/Community"><li>Community Engagement</li></nuxt-link>
-          <nuxt-link to="/Yachad"><li>Yachad</li></nuxt-link>
-          <nuxt-link to="/NCSY"><li>NCSY</li></nuxt-link>
-          <nuxt-link to="/Kosher"><li>Kosher</li></nuxt-link>
-          <nuxt-link to="/IPA"><li>IPA</li></nuxt-link>
-          <nuxt-link to="/JewishAction"><li>Jewish Action</li></nuxt-link>
-          <nuxt-link to="/ifs"><li>Israel Free Spirit</li></nuxt-link>
-          <nuxt-link to="/BoardAlerts"><li>Board Newsletters</li></nuxt-link>
-          <nuxt-link to="/OUIsrael"><li>OU Israel</li></nuxt-link>
-          <nuxt-link to="/RabbiWienrebs"><li>Rabbi Weinrebs</li></nuxt-link>
-          <nuxt-link to="/OUGeneral"><li>OU General</li></nuxt-link>
-          <nuxt-link to="/TeamYachad"><li>Team Yachad</li></nuxt-link>
-          <nuxt-link to="/ArnoldGerson"><li>Arnold Gerson</li></nuxt-link>
-          <nuxt-link to="/NextGen"><li>NextGen</li></nuxt-link>
+          <NuxtLink to="/all"><li>All</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>OU Torah</li></NuxtLink>
+          <NuxtLink to="/shabbatshalom"><li>Shabbat Shalom</li></NuxtLink> 
+          <NuxtLink to="/OuPress"><li>OU Press</li></NuxtLink>
+          <NuxtLink to="/OuJob"><li>Job Board</li></NuxtLink>
+          <NuxtLink to="/Community"><li>Community Engagement</li></NuxtLink>
+          <NuxtLink to="/Yachad"><li>Yachad</li></NuxtLink>
+          <NuxtLink to="/NCSY"><li>NCSY</li></NuxtLink>
+          <NuxtLink to="/Kosher"><li>Kosher</li></NuxtLink>
+          <NuxtLink to="/IPA"><li>IPA</li></NuxtLink>
+          <NuxtLink to="/JewishAction"><li>Jewish Action</li></NuxtLink>
+          <NuxtLink to="/ifs"><li>Israel Free Spirit</li></NuxtLink>
+          <NuxtLink to="/BoardAlerts"><li>Board Newsletters</li></NuxtLink>
+          <NuxtLink to="/OUIsrael"><li>OU Israel</li></NuxtLink>
+          <NuxtLink to="/RabbiWienrebs"><li>Rabbi Weinrebs</li></NuxtLink>
+          <NuxtLink to="/OUGeneral"><li>OU General</li></NuxtLink>
+          <NuxtLink to="/TeamYachad"><li>Team Yachad</li></NuxtLink>
+          <NuxtLink to="/ArnoldGerson"><li>Arnold Gerson</li></NuxtLink>
+          <NuxtLink to="/NextGen"><li>NextGen</li></NuxtLink>
 
 <!-- 
           
           
-          <nuxt-link to="/OUTorah"><li>Alumni</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>IPA</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Jewish Action</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>IFS</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Staff Education</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Board Newsletter</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>OU Israel</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Rabbi Weinreb</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>OU General</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Team Yachad</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Arnold Gerson</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>NextGen</li></nuxt-link>
-          <nuxt-link to="/OUTorah"><li>Bring Israel Home</li></nuxt-link>  -->
+          <NuxtLink to="/OUTorah"><li>Alumni</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>IPA</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Jewish Action</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>IFS</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Staff Education</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Board Newsletter</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>OU Israel</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Rabbi Weinreb</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>OU General</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Team Yachad</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Arnold Gerson</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>NextGen</li></NuxtLink>
+          <NuxtLink to="/OUTorah"><li>Bring Israel Home</li></NuxtLink>  -->
 
-          <nuxt-link to="/men"><li>Men's</li></nuxt-link>
-          <nuxt-link to="/new"><li>New</li></nuxt-link>
+          <NuxtLink to="/new"><li>New</li></NuxtLink>
      </ul>
     </div>
   </aside>
 </template>
 
-<script>
-import AppSwitch from './AppSwitch.vue';
+<script setup>
+import { ref } from 'vue'
+import AppSwitch from './AppSwitch.vue'
 
-export default {
-  props: {
-    newtype: {
-      type: Boolean,
-      default: false
-    },
-    usedamounts: {
-      type: [Number, String],
-      default: 300
-    }
+defineProps({
+  newtype: {
+    type: Boolean,
+    default: false
   },
-  data() {
-    return {
-      min: 0,
-      max: 400
-    };
-  },
-  components: {
-    AppSwitch
+  modelValue: {
+    type: [Number, String],
+    default: 300
   }
-};
+})
+
+defineEmits(['update:modelValue'])
+
+const min = ref(0)
+const max = ref(400)
 </script>
 
 <style lang="scss" scoped>

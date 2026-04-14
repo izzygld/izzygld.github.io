@@ -10,24 +10,21 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      trigger: this.checked
-    };
-  },
-  computed: {
-    checked() {
-      return this.$store.state.new;
-    }
-  },
-  methods: {
-    updateNew() {
-      this.$store.commit('switchnew');
-    }
-  }
-};
+<script setup>
+import { ref, computed } from 'vue'
+import { useMainStore } from '~/stores/main'
+
+const store = useMainStore()
+const checked = computed(() => {
+  return store.newFilter
+})
+
+const trigger = ref(checked.value)
+
+const updateNew = () => {
+  store.switchNew()
+  trigger.value = store.newFilter
+}
 </script>
 
 <style scoped lang="scss">

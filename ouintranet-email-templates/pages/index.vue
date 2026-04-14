@@ -2,11 +2,11 @@
   <main class="capsule">
     <app-masthead/>
     <div class="contain">
-      <app-sidebar :usedamounts.sync="highusage"/>
+      <app-sidebar v-model="highusage"/>
       <transition-group name="items" tag="section" class="content">
         <app-item
           v-for="(item, index) in products"
-          key="item"
+          :key="index"
           :item="item"
           :index="index"
         />
@@ -15,32 +15,23 @@
   </main>
 </template>
 
-<script>
-import AppSidebar from './../components/AppSidebar.vue';
-import AppMasthead from './../components/AppMasthead.vue';
-import AppItem from './../components/AppItem.vue';
+<script setup>
+import { ref, computed } from 'vue'
+import AppSidebar from './../components/AppSidebar.vue'
+import AppMasthead from './../components/AppMasthead.vue'
+import AppItem from './../components/AppItem.vue'
+import { useMainStore } from '~/stores/main'
 
-export default {
-  components: {
-    AppSidebar,
-    AppMasthead,
-    AppItem
-  },
-  data() {
-    return {
-      highusage: 300
-    };
-  },
-  computed: {
-    products() {
-      return this.$store.state.products.filter(el =>
-        this.$store.state.new
-          ? el.usage < this.highusage && el.new
-          : el.usage < this.highusage
-      );
-    }
-  }
-};
+const highusage = ref(300)
+const store = useMainStore()
+
+const products = computed(() => {
+  return store.products.filter(el =>
+    store.newFilter
+      ? el.usage < highusage.value && el.new
+      : el.usage < highusage.value
+  )
+})
 </script>
 
 <style>

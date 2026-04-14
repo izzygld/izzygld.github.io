@@ -4,6 +4,9 @@
   </footer>
 </template>
 
+<script setup>
+</script>
+
 <style scoped>
 footer {
   display: flex;

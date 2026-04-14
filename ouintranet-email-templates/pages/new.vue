@@ -4,11 +4,11 @@
       <app-masthead title="New" bkcolor="#1ba079"/>
     </div>
     <div class="contain">
-      <app-sidebar :usedamounts.sync="highusage" :new="true"/>
+      <app-sidebar v-model="highusage" :new="true"/>
       <transition-group name="items" tag="section" class="content">
         <app-item
-          v-for="(item, index) in sProducts"
-          key="item"
+          v-for="(item, index) in filteredProducts"
+          :key="item.img"
           :item="item"
           :index="index"
         />
@@ -17,28 +17,19 @@
   </main>
 </template>
 
-<script>
-import AppSidebar from './../components/AppSidebar.vue';
-import AppMasthead from './../components/AppMasthead.vue';
-import AppItem from './../components/AppItem.vue';
+<script setup>
+import { ref, computed } from 'vue'
+import AppSidebar from './../components/AppSidebar.vue'
+import AppMasthead from './../components/AppMasthead.vue'
+import AppItem from './../components/AppItem.vue'
+import { useMainStore } from '~/stores/main'
 
-export default {
-  components: {
-    AppSidebar,
-    AppMasthead,
-    AppItem
-  },
-  data() {
-    return {
-      highusage: 300
-    };
-  },
-  computed: {
-    sProducts() {
-      return this.$store.getters.new.filter(el => el.usage < this.highusage);
-    }
-  }
-};
+const highusage = ref(300)
+const store = useMainStore()
+
+const filteredProducts = computed(() => {
+  return store.newProducts.filter(el => el.usage < highusage.value)
+})
 </script>
 
 <style>

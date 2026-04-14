@@ -1,27 +1,18 @@
 <template>
   <div>
     <div class="wrapper">
-      <app-navigation />
-      <nuxt/>
+      <AppNavigation />
+      <NuxtPage />
       <div class="clear"></div>
       <div class="push"></div>
     </div>
-    <app-footer class="footer" />
+    <AppFooter class="footer" />
   </div>
 </template>
 
-<script>
-import AppNavigation from './../components/AppNavigation.vue';
-import AppFooter from './../components/AppFooter.vue';
-
-
-
-export default {
-  components: {
-    AppNavigation,
-    AppFooter
-  }
-};
+<script setup>
+import AppNavigation from './../components/AppNavigation.vue'
+import AppFooter from './../components/AppFooter.vue'
 </script>
 
 <style>
